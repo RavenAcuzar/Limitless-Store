@@ -1,0 +1,78 @@
+page-cart {
+    letter-spacing: 3px;
+    font-family: "Avenir Next";
+
+    ion-title{
+        .toolbar-title-md{
+            padding-right: 50px;
+        }
+    }
+    .cart-item{
+        ion-grid >ion-row{
+            margin:5px;
+            background-color: rgba(128, 128, 128, 0.12);
+        }
+        .cart-item-details{
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 1px !important;
+            .item-details-name{
+                font-size: 12px;
+                flex: 3 !important;
+                overflow: hidden;
+                ion-icon{
+                    font-size: 25px;
+                    color: rgba(0, 0, 0, 0.39);
+                }
+            }
+            >ion-row{
+                flex:1;
+            }
+        }
+    }
+    ion-footer{
+        background-color: transparent !important;
+        padding: 8px;
+        button{
+            width: 100%;
+        }
+        .activated{
+            background-color: rgba(0, 0, 0, 0.60) !important;
+        }
+    }
+    .order-summary{
+        font-size: 10px;
+        background-color:  rgba(0, 0, 0, 0.04);
+        .summary-values{
+            text-align: right;
+
+        }
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0; 
+    }
+    input[type=number]{
+        border: rgba(0, 0, 0, 0.29);
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        background-color: rgba(255, 255, 255, 0.60);
+        height: 80%;
+        text-align: center;
+        width: 100%;
+        border-radius: 5px
+    }
+    ion-item{
+        background-color: transparent !important;
+        padding-left:5px !important;
+        ion-select{
+            max-width: 50% !important;
+        }
+        ion-label{
+            color: black !important;
+        }
+    }
+}

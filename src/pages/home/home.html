@@ -3,16 +3,68 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>LIMITLESS</ion-title>
+    <ion-buttons end>
+        <button id="notification-button" ion-button icon-only (click)="goToCart()"> 
+          <ion-icon name="md-cart">
+              <ion-badge id="notifications-badge">3</ion-badge>
+          </ion-icon>
+          </button>
+      </ion-buttons>
   </ion-navbar>
+  <div class="search-bar">
+      <button start ion-button icon-only>
+          <ion-icon name="ios-barcode-outline">
+          </ion-icon>
+      </button>
+    <ion-input clearInput></ion-input>
+    <button end ion-button>Search</button>
+  </div>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content no-padding>
+  <ion-slides autoplay="2000" loop="true" speed="1000" class="slider">
+    <ion-slide *ngFor="let slide of promSlides">
+      <div>
+        <img src="{{slide.image}}" />
+        <div>
+          <p class="slide-title">{{slide.title}}</p>
+          <p class="sub">{{slide.subtitle}}</p>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <p padding class="section-title">BEST SELLERS</p>
+  <div class="divider">
+      <ion-scroll scrollX="true" direction="x">
+        <div id="bseller" class="channelBlock" *ngFor="let merch of bSellers" (click)="goToProdPrev($event, merch.index)">
+          <img [src]="merch.image" />
+          <div>
+            <b>{{merch.name}}</b><br> $ {{merch.price}}
+          </div>
+        </div>
+      </ion-scroll>
+    </div>
+    <p padding class="section-title">SHOP THE LOOK</p>
+    <div class="divider">
+        <ion-scroll scrollX="true" direction="x">
+          <div id="shopTheLook" class="channelBlock" *ngFor="let merch of bSellers" (click)="goToProdPrev($event, merch.index)">
+            <img [src]="merch.image" />
+            <div>
+              <b>{{merch.name}}</b><br> $ {{merch.price}}
+            </div>
+          </div>
+        </ion-scroll>
+      </div>
+      <p padding class="section-title">NEW PRODUCTS</p>
+      <div class="divider">
+          <ion-scroll scrollX="true" direction="x">
+            <div id="newProd" class="channelBlock" *ngFor="let merch of bSellers" (click)="goToProdPrev($event, merch.index)">
+              <img [src]="merch.image" />
+              <div>
+                <b>{{merch.name}}</b><br> $ {{merch.price}}
+              </div>
+            </div>
+          </ion-scroll>
+        </div>
 </ion-content>

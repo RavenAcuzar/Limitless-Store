@@ -1,0 +1,80 @@
+<!--
+  Generated template for the CartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>CART</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <div class="cart-item">
+    <ion-grid>
+      <ion-row *ngFor="let item of cartCont" ng-init="size= 'XS'">
+        <ion-col col-6>
+          <img [src]="item.image" />
+        </ion-col>
+        <ion-col col-6 class="cart-item-details">
+          <ion-row class="item-details-name" align-items-start>
+            <ion-col col-9><b>{{item.name}} 
+              <br> <br> USD {{item.price}} </b>
+            </ion-col>
+            <ion-col col-2 offset-1>
+              <ion-icon name="md-close"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row >
+            <ion-col col-8>
+              Quantity
+            </ion-col>
+            <ion-col col-4>
+              <input type="number" readonly="true" [value]="item.qty" (click)="showPopoverQty(item.index)" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-item no-lines>
+              <ion-label>Size</ion-label>
+              <ion-select [(ngModel)]="item.size" interface="popover">
+                <ion-option [selected]='true'>XS</ion-option>
+                <ion-option>S</ion-option>
+                <ion-option>M</ion-option>
+                <ion-option>L</ion-option>
+                <ion-option>XL</ion-option>
+                <ion-option>XXL</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <div class="order-summary">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <b>Subtotal:</b>
+        </ion-col>
+        <ion-col col-5 offset-3 class="summary-values">
+          <b>USD {{subTotal | number : '1.2-2'}}</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <b>Shipping Fee:</b>
+        </ion-col>
+        <ion-col col-5 offset-3 class="summary-values">
+          <b>FREE</b>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <button ion-button (click)="goToCheckout()">PROCEED TO CHECKOUT </button>
+</ion-footer>

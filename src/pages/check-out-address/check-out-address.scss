@@ -1,0 +1,68 @@
+page-check-out-address {
+    .header-md::after{
+        background-image: none !important;
+    }
+    .toolbar-background-ios{
+        border: 0 !important;
+    }
+    
+    ion-title{
+        .toolbar-title-md{
+            padding-right: 50px;
+        }
+    }
+    .scroll-content{
+        padding-bottom: 0 !important;
+    }
+    .timeline {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.30);
+      }
+      .timeline-period {
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+      }
+      .timeline-line {
+        flex: 1 0 auto;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.30);
+      }
+      .timeline-period.p1{
+          margin-right: -3px;
+          color:black;
+      }
+      .timeline-period.p2{
+        margin: auto -4px;
+      }
+      .timeline-period.p3{
+        margin-left: -3px;
+      }
+      .cont-row{
+        text-align: center;
+        font-size: 12px;
+        font-family: "Avenir Next";
+        color: rgba(0, 0, 0, 0.30);
+    }
+      
+    ion-footer{
+        button{
+            width: 100%;
+        }
+    }
+    .footer-md::before{
+        background-image: none !important;
+    }
+    ion-checkbox{
+        margin-right: 9px !important;
+        
+    }
+    ion-label{
+        font-size: 11px !important;
+    }
+}
