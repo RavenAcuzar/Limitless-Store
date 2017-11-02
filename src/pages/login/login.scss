@@ -1,0 +1,39 @@
+page-login {
+    letter-spacing: 3px;
+    font-family: "Avenir Next";
+    ion-header [class^="toolbar-background"] {
+        border: none !important;
+        background-color: transparent !important;
+    }
+    ion-segment [class^="segment"]{
+        max-width: 100% !important;
+    }
+    ion-segment-button.segment-button.segment-activated{
+        font-size: 1.5rem;
+    }
+    ion-title{
+        width: 104% !important;
+        .toolbar-title-md{
+            padding-right: 50px;
+        }
+    }
+    .header-md:after{
+        background-image: none; 
+    }
+    ion-content{
+        text-align: center;
+    }
+    p{
+        margin: 30px 0;
+        a{
+            color:rgba(0, 0, 0, 0.50);
+        }
+    }
+    img{
+        height: 26vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+      
+}

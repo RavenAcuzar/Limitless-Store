@@ -1,20 +1,12 @@
 page-splashnext {
-    
+    letter-spacing: 3px;
+    font-family: "Avenir Next";
         ion-header [class^="toolbar-background"] {
             border: none !important;
             background-color: transparent;
         }
         .header-md:after{
             background-image: none; 
-        }
-        ion-title{
-            .toolbar-title-md{
-                text-align: center !important;
-                margin-left: -33px !important;
-            }
-            .toolbar-title-ios{
-                font-weight: 400 !important;
-            }
         }
         > ion-content {
             > div.scroll-content, > div.fixed-content {

@@ -38,18 +38,18 @@
       <ion-row>
         <ion-col class="ft-more" col-2>
           <button ion-button icon-only>
-               <ion-icon name="ios-more"></ion-icon>
+               <ion-icon name="ios-information-circle-outline"></ion-icon>
              </button>
         </ion-col>
         <ion-col class="ft-stuff" col-3>
           <img src="{{img}}" />
         </ion-col>
-        <ion-col class="ft-color" col-2 (click)="showColorPop($event)">
-          <button ion-button #colorBtn></button>
+        <ion-col class="ft-color" col-2 >
+          <button ion-button #colorBtn (click)="showColorPop($event)"></button>
         </ion-col>
-        <ion-col class="ft-size" col-3 (click)="showSizePop($event)">
-          <button ion-button #size>
-                    SIZE - XS
+        <ion-col class="ft-size" col-3 >
+          <button ion-button (click)="showSizePop($event)">
+                    SIZE - {{size}}
                   </button>
         </ion-col>
         <ion-col class="ft-cart" col-2>

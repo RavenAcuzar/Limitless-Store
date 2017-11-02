@@ -21,6 +21,8 @@ import { QtyPopoverPage, ColorPopoverPage, SizePopoverPage } from "./popover";
 import { CheckOutConfirmPage } from "../pages/check-out-confirm/check-out-confirm";
 import { CheckOutPaymentPage } from "../pages/check-out-payment/check-out-payment";
 import { CheckOutAddressPage } from "../pages/check-out-address/check-out-address";
+import { LoginPage } from "../pages/login/login";
+import { CreateAccountPage } from "../pages/create-account/create-account";
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { CheckOutAddressPage } from "../pages/check-out-address/check-out-addres
     CheckOutPaymentPage,
     CheckOutConfirmPage,
     ColorPopoverPage,
-    SizePopoverPage
+    SizePopoverPage,
+    LoginPage,
+    CreateAccountPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ import { CheckOutAddressPage } from "../pages/check-out-address/check-out-addres
     CheckOutPaymentPage,
     CheckOutConfirmPage,
     ColorPopoverPage,
-    SizePopoverPage
+    SizePopoverPage,
+    LoginPage,
+    CreateAccountPage
   ],
   providers: [
     StatusBar,

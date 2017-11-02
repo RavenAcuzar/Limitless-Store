@@ -130,26 +130,26 @@ export class ColorPopoverPage {
 
 @Component({
     template: `
-        <ion-list no-lines [(ngModel)]="size" radio-group (ionChange)="changeSize()">
+        <ion-list no-lines [(ngModel)]="size" radio-group >
             <ion-item>
                 <ion-label>XS</ion-label>
-                <ion-radio value="XS"></ion-radio>
+                <ion-radio value="XS" (click)="changeSize()"></ion-radio>
             </ion-item>
             <ion-item class="text-charter">
                 <ion-label>S</ion-label>
-                <ion-radio value="S"></ion-radio>
+                <ion-radio value="S" (click)="changeSize()"></ion-radio>
             </ion-item>
             <ion-item class="text-iowan">
                 <ion-label>M</ion-label>
-                <ion-radio value="M"></ion-radio>
+                <ion-radio value="M" (click)="changeSize()"></ion-radio>
             </ion-item>
             <ion-item class="text-palatino">
                 <ion-label>L</ion-label>
-                <ion-radio value="L"></ion-radio>
+                <ion-radio value="L" (click)="changeSize()"></ion-radio>
             </ion-item>
             <ion-item class="text-san-francisco">
                 <ion-label>XL</ion-label>
-                <ion-radio value="XL"></ion-radio>
+                <ion-radio value="XL" (click)="changeSize()"></ion-radio>
             </ion-item>
         </ion-list>
   `
@@ -162,7 +162,7 @@ export class SizePopoverPage {
         private viewCtrl: ViewController,
         private navParams: NavParams
     ) {
-       this.sizeBtn= this.navParams.data.element;
+        this.size= this.navParams.data.size;
     }
     ionViewDidLoad() {
         document.getElementsByTagName("ion-app").item(0).classList.add("disable-scroll");
@@ -173,7 +173,8 @@ export class SizePopoverPage {
             document.getElementsByTagName("ion-app").item(0).classList.remove("disable-scroll");
     }
     changeSize() {
-        this.sizeBtn.style.
+        this.viewCtrl.dismiss(this.size).catch(() => { });
+        console.log("Size changed "+this.size);
     }
 }
 

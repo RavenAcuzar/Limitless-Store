@@ -19,7 +19,7 @@ export class ProductPrevPage {
 
   @ViewChild(Slides) slides: Slides;
   @ViewChild('colorBtn',{read:ElementRef}) colorBtn: ElementRef;
-  @ViewChild('size',{read:ElementRef}) sizeBtn: ElementRef;
+  // @ViewChild('size',{read:ElementRef}) sizeBtn: ElementRef;
   bsellers: any[];
   qty: number = 1;
   init: number;
@@ -27,6 +27,7 @@ export class ProductPrevPage {
   prodPrice: string;
   title:string;
   img:string;
+  size:string="XS";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
   private popoverCtrl:PopoverController) {
@@ -61,9 +62,13 @@ export class ProductPrevPage {
   }
   showSizePop(ev:UIEvent){
     let popover = this.popoverCtrl.create(SizePopoverPage,{
-      element: this.sizeBtn.nativeElement
+      size: this.size
     });
     popover.present({ev:ev});
+    popover.onDidDismiss(s=>{
+      if(s!=null)
+      this.size=s;
+    });
     
   }
 

@@ -1,0 +1,68 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>LOGIN/SIGN UP</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="contType" mode="md">
+      <ion-segment-button value="login">
+        LOGIN
+      </ion-segment-button>
+      <ion-segment-button value="signUp">
+        SIGN UP
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding no-bounce [ngSwitch]="contType">
+  <div *ngSwitchCase="'login'">
+    <ion-item>
+      <ion-label floating>EMAIL</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>PASSWORD</ion-label>
+      <ion-input type="{{ltype}}"></ion-input>
+      <button *ngIf="!showPass3" ion-button clear type="button" item-right (click)="showPassword(2)" style="font-size:25px; color: rgba(0, 0, 0, 0.45);"> <ion-icon name="md-eye-off"></ion-icon></button>
+      <button *ngIf="showPass3" ion-button clear type="button" item-right (click)="showPassword(2)" style="font-size:25px; color: rgba(0, 0, 0, 0.45);"> <ion-icon name="md-eye"></ion-icon></button>
+    </ion-item>
+    <p><a>Forgot Password?</a></p>
+    <button ion-button style="width:100%;">LOGIN</button>
+  </div>
+  <div *ngSwitchCase="'signUp'">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>FIRST NAME</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>LAST NAME</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>EMAIL</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>PASSWORD</ion-label>
+        <ion-input type="{{type}}" required pattern=".{4,10}"></ion-input>
+        <button *ngIf="!showPass" ion-button clear type="button" item-right (click)="showPassword(0)" style="font-size:25px; color: rgba(0, 0, 0, 0.45);"> <ion-icon name="md-eye-off"></ion-icon></button>
+        <button *ngIf="showPass" ion-button clear type="button" item-right (click)="showPassword(0)" style="font-size:25px; color: rgba(0, 0, 0, 0.45);"> <ion-icon name="md-eye"></ion-icon></button>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>CONFIRM PASSWORD</ion-label>
+        <ion-input type="{{ctype}}"></ion-input>
+        <button *ngIf="!showPass2" ion-button clear type="button" item-right (click)="showPassword(1)" style="font-size:25px; color: rgba(0, 0, 0, 0.45);"> <ion-icon name="md-eye-off"></ion-icon></button>
+        <button *ngIf="showPass2" ion-button clear type="button" item-right (click)="showPassword(1)" style="font-size:25px; color: rgba(0, 0, 0, 0.45);"> <ion-icon name="md-eye"></ion-icon></button>
+      </ion-item>
+    </ion-list>
+    <button ion-button style="width:100%;">SIGN UP</button>
+  </div>
+</ion-content>

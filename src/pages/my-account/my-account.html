@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-      <button ion-button menuToggle>
+    <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
     <ion-title>MY ACCOUNT</ion-title>
@@ -17,5 +17,81 @@
 
 
 <ion-content padding>
+  <div>
+    <p><b>ACCOUNT INFO</b></p>
+    <button class="edit-btn" end ion-button icon-only [disabled]="!disable" (click)="editDetails()">
+    <ion-icon name="ios-create-outline"></ion-icon>
+    </button>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>FIRST NAME</ion-label>
+      <ion-input disabled="{{disable}}" value="LOREM IPSUM">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>LAST NAME</ion-label>
+      <ion-input disabled="{{disable}}" value="DOLOR SIT">
+      </ion-input>
+    </ion-item>
+    <ion-item text-wrap (click)="toggleGroup(0)" [ngClass]="{active: isGroupShown(0)}">
+      <h3>
 
+        <ion-icon color="success" item-left [name]="isGroupShown(0) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+        PERSONAL DETAILS
+      </h3>
+    </ion-item>
+    <div *ngIf="isGroupShown(0)">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>BIRTHDAY</ion-label>
+          <ion-datetime disabled="{{disable}}" displayFormat="DD-MM-YYYY" [(ngModel)]="birthday"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>GENDER</ion-label>
+          <ion-select disabled="{{disable}}" [(ngModel)]="gender">
+            <ion-option value="F">FEMALE</ion-option>
+            <ion-option value="M">MALE</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-item text-wrap (click)="toggleGroup(1)" [ngClass]="{active: isGroupShown(1)}">
+      <h3>
+        <ion-icon color="success" item-left [name]="isGroupShown(1) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+        ADDRESS
+      </h3>
+    </ion-item>
+    <div *ngIf="isGroupShown(1)">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>ADDRESS LINE 1</ion-label>
+          <ion-input disabled="{{disable}}" value="Lorem ipsum dolor sit amet, consectetur"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>ADDRESS LINE 2</ion-label>
+          <ion-input disabled="{{disable}}" value="Lorem ipsum dolor sit amet, consectetur"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-item text-wrap (click)="toggleGroup(2)" [ngClass]="{active: isGroupShown(2)}">
+      <h3>
+        <ion-icon color="success" item-left [name]="isGroupShown(2) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+        ACCOUNT DETAILS
+      </h3>
+    </ion-item>
+    <div *ngIf="isGroupShown(2)">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>EMAIL</ion-label>
+          <ion-input disabled="{{disable}}" value="Lorem@ipsum.com"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>PASSWORD</ion-label>
+          <ion-input type="password" disabled="{{disable}}" value="Loremipsum"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-list>
+  <button [hidden]="disable" ion-button style="width:100%;" (click)="saveChanges()">SAVE CHANGES</button>
 </ion-content>

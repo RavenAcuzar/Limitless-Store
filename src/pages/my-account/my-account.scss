@@ -1,3 +1,29 @@
 page-my-account {
+    letter-spacing: 3px;
+    font-family: "Avenir Next";
+    
+    ion-title{
+        width: 104% !important;
+        .toolbar-title-md{
+            padding-right: 50px;
+        }
+    }
 
+    p{
+        padding-left: 16px;
+        font-size: 16px;
+        float: left;
+    }
+    .edit-btn{
+        float: right;
+        box-shadow: none !important;
+        background-color: map-get($colors, light) !important;
+        color: black !important;
+        margin-bottom: 0px !important;
+        margin-top: 8px !important;
+    }
+    .edit-btn:active{
+        color: white !important;
+        background-color:rgba(0,0,0, 0.50) !important;
+    }
 }

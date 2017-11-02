@@ -1,27 +1,24 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from "../login/login";
 
 /**
- * Generated class for the EditorialsPage page.
+ * Generated class for the CreateAccountPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-editorials',
-  templateUrl: 'editorials.html',
+  selector: 'page-create-account',
+  templateUrl: 'create-account.html',
 })
-export class EditorialsPage {
+export class CreateAccountPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EditorialsPage');
+    console.log('ionViewDidLoad CreateAccountPage');
   }
-  goToLogin(){
-    this.navCtrl.push(LoginPage);
-  }
+
 }
