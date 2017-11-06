@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>CREATE ACCOUNT</ion-title>
+    <ion-title>SIGN UP</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -24,16 +24,24 @@
       <ion-input></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>EMAIL</ion-label>
-      <ion-input></ion-input>
+      <ion-label floating>BIRTHDAY</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="birthday"></ion-datetime>
     </ion-item>
     <ion-item>
-      <ion-label floating>PASSWORD</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-label>GENDER</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="F">FEMALE</ion-option>
+        <ion-option value="M">MALE</ion-option>
+      </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label floating>CONFIRM PASSWORD</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-label floating>ADDRESS LINE 1</ion-label>
+      <ion-input value="Lorem ipsum dolor sit amet, consectetur"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>ADDRESS LINE 2</ion-label>
+      <ion-input value="Lorem ipsum dolor sit amet, consectetur"></ion-input>
     </ion-item>
   </ion-list>
+  <button ion-button style="width:100%">CONTINUE</button>
 </ion-content>

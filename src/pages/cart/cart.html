@@ -33,7 +33,7 @@
               Quantity
             </ion-col>
             <ion-col col-4>
-              <input type="number" readonly="true" [value]="item.qty" (click)="showPopoverQty(item.index)" />
+              <input type="number" readonly="true" [value]="item.qty" (click)="showPopoverQty($event,item.index)" />
             </ion-col>
           </ion-row>
           <ion-row>

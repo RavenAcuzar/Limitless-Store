@@ -21,4 +21,72 @@
         <img src="./assets/img/mens_banner.jpg"/>
         <h4>MEN</h4>
       </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card id="tshirt" (click)="goToProdList($event)">
+              <img src="./assets/img/men-top.png" padding/>
+              <ion-card-content>
+                <ion-card-title>
+                  Tops & Shirts
+                  </ion-card-title>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card id="jack" (click)="goToProdList($event)" >
+              <img src="./assets/img/men-h.png" padding>
+              <ion-card-content>
+                <ion-card-title>
+                  Jackets
+                  </ion-card-title>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card id="pants" (click)="goToProdList($event)">
+              <img src="./assets/img/men-pant.png" padding>
+              <ion-card-content>
+                <ion-card-title>
+                  Pants
+                  </ion-card-title>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card id="shorts" (click)="goToProdList($event)">
+              <img src="./assets/img/men-sh.png" padding>
+              <ion-card-content>
+                <ion-card-title>
+                  Shorts
+                  </ion-card-title>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card id="shoes" (click)="goToProdList($event)" >
+              <img src="./assets/img/men-shoe.png" padding>
+              <ion-card-content>
+                <ion-card-title>
+                  Shoes
+                  </ion-card-title>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card id="acc" (click)="goToProdList($event)">
+              <img src="./assets/img/men-acc.png" padding>
+              <ion-card-content>
+                <ion-card-title>
+                  Accesories
+                  </ion-card-title>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 </ion-content>

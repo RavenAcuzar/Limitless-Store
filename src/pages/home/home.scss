@@ -1,5 +1,5 @@
 page-home {
-    
+    font-family: "Avenir Next";
         
         .search-bar{
             margin-bottom: 8px;
@@ -59,51 +59,8 @@ page-home {
                 }
             }
         }
-        .section-title{
-            font-family: "Avenir Next";
-            font-size: 20px;
-            letter-spacing: 3px;
-        }
-        .divider{
-            height: auto;
-            margin-bottom: 1vh;
-            >h6{
-                margin-bottom: 2vh;
-            }
-        }
-        ion-scroll{
-            min-height: 23.3vh;
-            height: 80vw;
-            .scroll-content{
-                overflow-x: scroll;
-                -webkit-overflow-scrolling: touch;
-                scroll-snap-type: mandatory;
-                scroll-snap-destination: 0% 100%;
-                scroll-snap-points-x: repeat(100%);
-                padding: 0px !important;
-            }
-        }
-    
-        .channelBlock{
-            display: inline-block;
-            width: 75vw;
-            overflow: hidden;
-            text-align: center;
-            >div{
-                text-align: center;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                margin: 0px 5px 0px 5px;
-            }
-            >img{
-                width: 70vw;
-                height: 70vw;
-                object-fit: cover;
-            }
-        }
-        .scroll-zoom-wrapper{
-            white-space: nowrap;
+        .text-input-ios{
+            margin: 22px 8px 0 0 !important;
         }
     }
     

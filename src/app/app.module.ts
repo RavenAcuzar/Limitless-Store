@@ -23,6 +23,7 @@ import { CheckOutPaymentPage } from "../pages/check-out-payment/check-out-paymen
 import { CheckOutAddressPage } from "../pages/check-out-address/check-out-address";
 import { LoginPage } from "../pages/login/login";
 import { CreateAccountPage } from "../pages/create-account/create-account";
+import { ProductListPage } from '../pages/product-list/product-list';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CreateAccountPage } from "../pages/create-account/create-account";
     ColorPopoverPage,
     SizePopoverPage,
     LoginPage,
-    CreateAccountPage
+    CreateAccountPage,
+    ProductListPage
   ],
   imports: [
     BrowserModule,
@@ -72,7 +74,8 @@ import { CreateAccountPage } from "../pages/create-account/create-account";
     ColorPopoverPage,
     SizePopoverPage,
     LoginPage,
-    CreateAccountPage
+    CreateAccountPage,
+    ProductListPage
   ],
   providers: [
     StatusBar,

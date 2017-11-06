@@ -21,5 +21,72 @@
     <img src="./assets/img/womens_banner.jpg"/>
     <h4>WOMEN</h4>
   </div>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card id="tshirt" (click)="goToProdList($event)">
+          <img src="./assets/img/wm-top.png" padding/>
+          <ion-card-content>
+            <ion-card-title>
+              Tops & Shirts
+              </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card id="jack" (click)="goToProdList($event)">
+          <img src="./assets/img/wm-h.png" padding>
+          <ion-card-content>
+            <ion-card-title>
+              Jackets
+              </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card id="pants" (click)="goToProdList($event)">
+          <img src="./assets/img/wm-pant.png" padding>
+          <ion-card-content>
+            <ion-card-title>
+              Pants
+              </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card id="shorts" (click)="goToProdList($event)">
+          <img src="./assets/img/wm-sh.png" padding>
+          <ion-card-content>
+            <ion-card-title>
+              Shorts
+              </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card id="shoes" (click)="goToProdList($event)" >
+          <img src="./assets/img/wm-shoe.png" padding>
+          <ion-card-content>
+            <ion-card-title>
+              Shoes
+              </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card id="acc" (click)="goToProdList($event)">
+          <img src="./assets/img/wm-acc.png" padding>
+          <ion-card-content>
+            <ion-card-title>
+              Accesories
+              </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

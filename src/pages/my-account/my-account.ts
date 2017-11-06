@@ -17,6 +17,7 @@ export class MyAccountPage {
   shownGroup=null;
   gender = "F";
   disable:boolean =true;
+  accDisable:boolean=true;
   birthday = new Date().toISOString();
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -75,6 +76,11 @@ editDetails(){
 
 saveChanges(){
   this.disable=true;
+  this.accDisable=true;
+}
+
+editAccount(){
+  this.accDisable = false;
 }
 
 }

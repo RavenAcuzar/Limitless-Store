@@ -1,0 +1,59 @@
+<!--
+  Generated template for the ProductListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <div class="banner">
+    <img [src]="bannerImg" />
+    <h4>{{sex}}</h4>
+  </div>
+  <div padding>
+    <p class="section-title">BEST SELLERS</p>
+    <div class="divider">
+      <ion-scroll scrollX="true" direction="x">
+        <div id="bseller" class="channelBlock" *ngFor="let merch of bSellers" (click)="goToProdPrev($event, merch.index)">
+          <img [src]="merch.image" />
+          <div>
+            <b>{{merch.name}}</b>
+            <br> $ {{merch.price}}
+          </div>
+        </div>
+      </ion-scroll>
+    </div>
+    <p class="section-title">NEW ARRIVALS</p>
+    <div class="divider">
+      <ion-scroll scrollX="true" direction="x">
+        <div id="narrive" class="channelBlock" *ngFor="let merch of bSellers" (click)="goToProdPrev($event, merch.index)">
+          <img [src]="merch.image" />
+          <div>
+            <b>{{merch.name}}</b>
+            <br> $ {{merch.price}}
+          </div>
+        </div>
+      </ion-scroll>
+    </div>
+    <p class="section-title">ALL PRODUCTS</p>
+    <div class="divider">
+      <ion-scroll scrollX="true" direction="x">
+        <div id="allprod" class="channelBlock" *ngFor="let merch of bSellers" (click)="goToProdPrev($event, merch.index)">
+          <img [src]="merch.image" />
+          <div>
+            <b>{{merch.name}}</b>
+            <br> $ {{merch.price}}
+          </div>
+        </div>
+      </ion-scroll>
+    </div>
+  </div>
+</ion-content>

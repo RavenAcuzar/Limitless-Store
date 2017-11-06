@@ -8,8 +8,8 @@
 
   <ion-navbar>
     <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>MY ACCOUNT</ion-title>
   </ion-navbar>
 
@@ -18,9 +18,11 @@
 
 <ion-content padding>
   <div>
-    <p><b>ACCOUNT INFO</b></p>
+    <p>
+      <b>ACCOUNT INFO</b>
+    </p>
     <button class="edit-btn" end ion-button icon-only [disabled]="!disable" (click)="editDetails()">
-    <ion-icon name="ios-create-outline"></ion-icon>
+      <ion-icon name="ios-create-outline"></ion-icon>
     </button>
   </div>
   <ion-list>
@@ -78,17 +80,28 @@
       <h3>
         <ion-icon color="success" item-left [name]="isGroupShown(2) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
         ACCOUNT DETAILS
+        <button class="edit-btn" end ion-button icon-only [disabled]="disable" (click)="editAccount()">
+          <ion-icon name="ios-create-outline"></ion-icon>
+        </button>
       </h3>
     </ion-item>
     <div *ngIf="isGroupShown(2)">
       <ion-list>
         <ion-item>
           <ion-label floating>EMAIL</ion-label>
-          <ion-input disabled="{{disable}}" value="Lorem@ipsum.com"></ion-input>
+          <ion-input disabled="{{accDisable}}" value="Lorem@ipsum.com"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>PASSWORD</ion-label>
-          <ion-input type="password" disabled="{{disable}}" value="Loremipsum"></ion-input>
+          <ion-input type="password" disabled="{{accDisable}}" value="Loremipsum"></ion-input>
+        </ion-item>
+        <ion-item [hidden]="accDisable">
+          <ion-label floating>NEW PASSWORD</ion-label>
+          <ion-input type="password" disabled="{{accDisable}}"></ion-input>
+        </ion-item>
+        <ion-item [hidden]="accDisable">
+          <ion-label floating>CONFIRM PASSWORD</ion-label>
+          <ion-input type="password" disabled="{{accDisable}}"></ion-input>
         </ion-item>
       </ion-list>
     </div>

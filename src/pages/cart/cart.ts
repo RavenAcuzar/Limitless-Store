@@ -35,12 +35,14 @@ export class CartPage {
     });
     this.getSubTotal();
   }
-  showPopoverQty(index) {
+  showPopoverQty(ev,index) {
     console.log('Qty Clicked!');
     let popover = this.popoverCtrl.create(QtyPopoverPage, {
       qty: this.cartCont[index].qty
     });
-    popover.present();
+    popover.present(
+      {ev:ev}
+    );
     popover.onDidDismiss(qty => {
       if(qty!=null)
         this.cartCont[index].qty = qty;

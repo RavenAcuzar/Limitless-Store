@@ -59,4 +59,7 @@ export class LoginPage {
       }
     }
   }
+  goToAccountInfo(){
+    this.navCtrl.push(CreateAccountPage);
+  }
 }
