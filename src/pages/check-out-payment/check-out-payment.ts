@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Navbar } from 'ionic-angular';
 import { CheckOutConfirmPage } from "../check-out-confirm/check-out-confirm";
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 /**
  * Generated class for the CheckOutPaymentPage page.
@@ -15,17 +16,40 @@ import { CheckOutConfirmPage } from "../check-out-confirm/check-out-confirm";
   templateUrl: 'check-out-payment.html',
 })
 export class CheckOutPaymentPage {
-
+  @ViewChild(Navbar) navBar: Navbar;
   payment:string="cod";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  private nativePageTransitions:NativePageTransitions) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CheckOutPaymentPage');
+    this.navBar.backButtonClick =()=>{
+      let options: NativeTransitionOptions = {
+        direction: 'right',
+        duration: 200,
+        slowdownfactor: 0,
+        iosdelay: 0
+       };
+    
+     this.nativePageTransitions.slide(options)
+     .then(success=>{})
+     .catch(onError =>{});
+     this.navCtrl.pop({animate:false});
+    }
   }
 
   proceedPayment(){
-    this.navCtrl.push(CheckOutConfirmPage);
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 200,
+      slowdownfactor: 0,
+      iosdelay: 0
+     };
+  
+   this.nativePageTransitions.slide(options)
+   .then(success=>{})
+   .catch(onError =>{});
+    this.navCtrl.push(CheckOutConfirmPage,{},{animate:false});
   }
 
 }

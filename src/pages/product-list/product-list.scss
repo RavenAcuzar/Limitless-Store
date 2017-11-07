@@ -1,9 +1,10 @@
 page-product-list {
     font-family: "Avenir Next";
     ion-title{
-        padding-left: 68px !important;
-        padding-right: 68px !important;
-
+        width: 104% !important;
+        .toolbar-title-md{
+            padding-right: 50px;
+        }
     }
     .banner {
         img{

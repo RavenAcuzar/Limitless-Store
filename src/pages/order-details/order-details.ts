@@ -1,29 +1,24 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { OrderDetailsPage } from '../order-details/order-details';
 
 /**
- * Generated class for the OrderTrackingPage page.
+ * Generated class for the OrderDetailsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
-
 @Component({
-  selector: 'page-order-tracking',
-  templateUrl: 'order-tracking.html',
+  selector: 'page-order-details',
+  templateUrl: 'order-details.html',
 })
-export class OrderTrackingPage {
+export class OrderDetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad OrderTrackingPage');
+    console.log('ionViewDidLoad OrderDetailsPage');
   }
 
-  goToDetails(){
-    this.navCtrl.push(OrderDetailsPage);
-  }
 }

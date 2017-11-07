@@ -1,7 +1,47 @@
 page-order-tracking {
-
+    font-family: "Avenir Next" !important;
     ion-title{
-        padding: 0 68px 1px !important;
+        div.toolbar-title.toolbar-title-ios{
+            overflow: visible;
+        }
+        .toolbar-title-md{
+            padding-right: 50px;
+        }
+    }
+    ion-content{
+        background-color: #f3f3f3 !important;
+    }
+    .order-list-title{
+        color: #828181;
+        font-size: 15px;
+        p{
+            -webkit-margin-after: 3px;
+        }
+    }
+    ion-item{
+        ion-img{
+            width: 97px !important;
+            height: 97px !important;
+            img{
+                width: 97px !important;
+                height: 97px !important;
+            }
+        } 
+        ion-badge{
+         background-color: #e0e0e0 !important;
+         color: #757575 !important;
+         font-weight: normal !important;
+         line-height: 1.5;
+         margin-top: 8px;   
+        }
+        .item-title{
+            overflow: hidden;
+            height: 42px;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
     }
 
 }

@@ -22,7 +22,6 @@ export class CheckOutConfirmPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CheckOutConfirmPage');
     this.navBar.backButtonClick = () => {
       this.navCtrl.setRoot(HomePage);
     }

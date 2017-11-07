@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CheckOutPaymentPage } from "../check-out-payment/check-out-payment";
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 /**
  * Generated class for the CheckOutAddressPage page.
@@ -16,14 +17,21 @@ import { CheckOutPaymentPage } from "../check-out-payment/check-out-payment";
 })
 export class CheckOutAddressPage {
   billAddShipAdd :boolean=false;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private nativePageTransitions: NativePageTransitions) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CheckOutAddressPage');
   }
   proceedPayment(){
-    this.navCtrl.push(CheckOutPaymentPage);
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 200,
+      slowdownfactor: 0,
+      iosdelay: 0
+     };
+    this.nativePageTransitions.slide(options);
+    this.navCtrl.push(CheckOutPaymentPage,{},{animate:false});
   }
   changeBillAddVal(){
     //do something

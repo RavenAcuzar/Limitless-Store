@@ -24,6 +24,8 @@ import { CheckOutAddressPage } from "../pages/check-out-address/check-out-addres
 import { LoginPage } from "../pages/login/login";
 import { CreateAccountPage } from "../pages/create-account/create-account";
 import { ProductListPage } from '../pages/product-list/product-list';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+import { OrderDetailsPage } from '../pages/order-details/order-details';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { ProductListPage } from '../pages/product-list/product-list';
     SizePopoverPage,
     LoginPage,
     CreateAccountPage,
-    ProductListPage
+    ProductListPage,
+    OrderDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -75,13 +78,15 @@ import { ProductListPage } from '../pages/product-list/product-list';
     SizePopoverPage,
     LoginPage,
     CreateAccountPage,
-    ProductListPage
+    ProductListPage,
+    OrderDetailsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Slides
+    Slides,
+    NativePageTransitions
   ]
 })
 export class AppModule {}
