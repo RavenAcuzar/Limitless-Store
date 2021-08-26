@@ -52,11 +52,15 @@ ionic cordova build ios
 ```
 
 ## Screenshots
-![Screenshot1](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X).png) ![Screenshot2](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(1).png)
-![Screenshot3](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(2).png) ![Screenshot4](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(3).png)
-![Screenshot5](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(4).png) ![Screenshot6](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(5).png)
-![Screenshot7](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(6).png) ![Screenshot8](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(7).png)
-![Screenshot9](https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(9).png)
+<img src="https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X).png" width="30%">
+
+<img src="https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(2).png" width="30%">
+
+<img src="https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(4).png" width="30%"> 
+
+<img src="https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(6).png" width="30%"> 
+
+<img src="https://github.com/RavenAcuzar/Limitless-Store/blob/master/src/assets/img/localhost_8100_(iPhone%20X)%20(9).png" width="30%">
 
 
 ## Built with
